@@ -38,7 +38,7 @@
         <div id="pwa-install-banner" class="hidden fixed bottom-0 left-0 right-0 z-50 p-4 bg-white shadow-[0_-5px_20px_rgba(0,0,0,0.1)] rounded-t-3xl slide-up border-t border-blue-100 flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-4">
                 <div class="bg-blue-100 p-3 rounded-2xl text-blue-700"><i class="fas fa-download text-xl"></i></div>
-                <div><h3 class="font-bold text-slate-800">Install Aplikasi</h3><p class="text-xs text-slate-500">Pasang di layar utama HP.</p></div>
+                <div><h3 class="font-bold text-slate-800">Install Aplikasi SARKRIS</h3><p class="text-xs text-slate-500">Pasang di layar utama HP.</p></div>
             </div>
             <div class="flex gap-3 w-full md:w-auto">
                 <button onclick="dismissInstall()" class="flex-1 md:flex-none py-2 px-4 rounded-xl text-sm font-semibold text-slate-500 hover:bg-slate-100">Nanti</button>
@@ -59,7 +59,7 @@
                         <p class="text-blue-200 font-serif italic mb-2 text-sm">"Takut akan Tuhan adalah permulaan pengetahuan"</p>
                         <h1 class="text-2xl font-bold leading-tight mb-2">Siswa Kristen<br>SMAN 1 Kandangan</h1>
                     </div>
-                    <div class="relative z-10 text-[10px] text-blue-300 mt-8">&copy; 2024 SARKRIS v3.0</div>
+                    <div class="relative z-10 text-[10px] text-blue-300 mt-8">&copy; 2026 Amaranggana.CO</div>
                 </div>
                 <div class="md:w-7/12 p-8 md:p-12 bg-white flex flex-col justify-center relative">
                     <div id="login-options" class="w-full max-w-md mx-auto space-y-6">
@@ -139,7 +139,7 @@
                             <textarea id="prayerRequest" rows="2" placeholder="Apa yang kamu dapat dari renungan hari ini? Atau tuliskan doamu..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-xs resize-none"></textarea>
                         </div>
 
-                        <!-- Agenda Harian Siswa (Shape dibawah Shape Tanggal/Form) -->
+                        <!-- Agenda Harian Siswa -->
                         <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
                             <label class="block text-xs font-bold text-blue-600 uppercase mb-1">Agenda / Kegiatan Harianmu</label>
                             <textarea id="dailyLog" rows="2" placeholder="Ceritakan kegiatan positifmu hari ini..." class="w-full px-4 py-2 bg-white border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-xs resize-none"></textarea>
@@ -321,15 +321,15 @@
         import { getFirestore, collection, addDoc, getDocs, onSnapshot, query, where, orderBy, doc, deleteDoc, setDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
         // ===========================================
-        // ⚠️ TEMPEL KODE FIREBASE DI BAWAH INI ⚠️
+        // KONFIGURASI FIREBASE ANDA
         // ===========================================
-       const firebaseConfig = {
-         apiKey: "AIzaSyDMNL5ebbDTfEUUqskWwyHHB28D4ghZZhE",
-         authDomain: "sakris-web.firebaseapp.com",
-         projectId: "sakris-web",
-         storageBucket: "sakris-web.firebasestorage.app",
-         messagingSenderId: "344789248730",
-         appId: "1:344789248730:web:a07931e0847036d6c8d3e3"
+        const firebaseConfig = {
+            apiKey: "AIzaSyDMNL5ebbDTfEUUqskWwyHHB28D4ghZZhE",
+            authDomain: "sakris-web.firebaseapp.com",
+            projectId: "sakris-web",
+            storageBucket: "sakris-web.firebasestorage.app",
+            messagingSenderId: "344789248730",
+            appId: "1:344789248730:web:a07931e0847036d6c8d3e3"
         };
         // ===========================================
 
